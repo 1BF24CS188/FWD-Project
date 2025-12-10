@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SkillFusion - Sign Up</title>
+  <link rel="stylesheet" href="signup.css" />
+</head>
+
+<body>
+  <div class="signup-container">
+    <div class="form-box" role="main" aria-labelledby="signupTitle">
+
+      <h1 id="signupTitle" class="logo">SkillFusion</h1>
+      <p class="subtitle">Create your account and join the SkillFusion fam 🎉</p>
+
+      <form id="signupForm" novalidate>
+        
+        <input type="text" id="username" placeholder=" Username" autocomplete="username" required />
+
+        <input type="email" id="email" placeholder=" Email address" autocomplete="email" required />
+
+        <input type="text" id="mobile" placeholder=" Mobile number" autocomplete="tel" required />
+
+        <div class="password-container">
+          <input type="password" id="password" placeholder=" Password" autocomplete="new-password" required />
+          <button type="button" class="toggle-password" id="togglePassword">👁</button>
+        </div>
+
+        <div class="password-container">
+          <input type="password" id="confirmPassword" placeholder=" Confirm Password" autocomplete="new-password" required />
+          <button type="button" class="toggle-password" id="toggleConfirm">👁</button>
+        </div>
+
+        <button type="submit" class="login-btn">Sign Up</button>
+
+        <p id="errorMessage" class="error-msg" aria-live="polite"></p>
+      </form>
+
+      <div class="links">
+        <p>Already a member? <a href="login.html">Login here</a></p>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="signup.js" defer></script>
+</body>
+</html>

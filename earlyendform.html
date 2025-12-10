@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Early End Session Form | SkillFusion</title>
+  <link rel="stylesheet" href="earlyendform.css" />
+</head>
+<body>
+
+  <header class="form-header">
+    <h2>Early End Session Feedback</h2>
+  </header>
+
+  <main class="form-container">
+    <form id="endForm">
+      
+      <p class="desc">
+        Please tell us why you are ending this session early.  
+        Your feedback helps us maintain quality.
+      </p>
+
+      <label for="mentorName"><b>Mentor Name</b></label>
+      <input type="text" id="mentorName" readonly />
+
+      <label for="skill"><b>Course / Skill</b></label>
+      <input type="text" id="skill" readonly />
+
+      <label for="reason"><b>Reason for Ending the Session</b></label>
+      <textarea id="reason" rows="5" placeholder="Describe the issue clearly..." required></textarea>
+
+      <button type="submit" class="submit-btn">Submit Feedback</button>
+    </form>
+  </main>
+
+  <footer class="form-footer">
+    © 2025 SkillFusion
+  </footer>
+
+  <script src="earlyendform.js"></script>
+</body>
+</html>

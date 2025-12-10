@@ -1,0 +1,343 @@
+/*body, html {
+  height: 100%;
+  background:
+    linear-gradient(135deg, rgba(239, 239, 248, 0.92), rgba(192, 192, 248, 0.92)),
+    url("back.jpg") repeat center center fixed;
+  background-size: contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(1px);
+}*/
+/* BASE THEME */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", system-ui, sans-serif;
+}
+
+body, html {
+  height: 100%;
+  background:
+    linear-gradient(135deg, rgba(239, 239, 248, 0.88), rgba(192, 192, 248, 0.88)),
+    url("back.jpg") repeat center center fixed;
+  /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+     This gives EXACT faded purple + faded picture effect
+  */
+  display: flex;
+  flex-direction: column;
+  color: #222;
+}
+
+/* HEADER */
+.dash-header {
+  background: #645cbd;
+  color: #fff;
+  padding: 12px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.brand {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.header-center {
+  flex: 1;
+  text-align: center;
+}
+
+#quoteHeader {
+  font-size: 0.95rem;
+  font-style: italic;
+  color: #f8f8ff;
+}
+
+.header-right {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.icon-btn,
+.logout-btn {
+  background: #fff;
+  color: #645cbd;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 14px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: 0.25s;
+  white-space: nowrap;
+}
+
+.icon-btn:hover,
+.logout-btn:hover {
+  background: #f4f2ff;
+  transform: translateY(-1px);
+}
+
+/* MAIN */
+.dash-main {
+  flex: 1;
+  padding: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.widgets-grid {
+  width: 100%;
+  max-width: 1100px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+/* CARD */
+.card {
+  background: rgba(255, 255, 255, 0.9); /* translucent for better theme */
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  padding: 18px 18px 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.12);
+}
+
+.card h3 {
+  font-size: 1.1rem;
+  color: #5144b0;
+  margin-bottom: 8px;
+}
+
+.card-hint {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+/* QUICK STATS */
+.stats-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 6px;
+}
+
+.stat-item {
+  flex: 1;
+  min-width: 90px;
+  background: #f6f4ff;
+  border-radius: 12px;
+  padding: 10px;
+  text-align: center;
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+.stat-value {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #645cbd;
+}
+
+/* QUICK ACTIONS */
+.actions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.action-btn {
+  border: none;
+  border-radius: 12px;
+  padding: 10px 12px;
+  background: #f7f6ff;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: 0.2s;
+  justify-content: flex-start;
+}
+
+.action-btn:hover {
+  background: #ebe7ff;
+  transform: translateY(-1px);
+}
+
+/* Notification bubble */
+.action-notif {
+  position: relative;
+}
+
+.notif-bubble {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  min-width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  background: #e53935;
+  color: #fff;
+  font-size: 0.7rem;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+/* COMPLETED COURSES */
+.simple-list {
+  list-style: none;
+}
+
+.simple-list li {
+  padding: 6px 8px;
+  border-radius: 10px;
+  background: #f9f8ff;
+  border: 1px solid #ece8ff;
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+}
+
+.course-name {
+  font-weight: 600;
+  color: #5144b0;
+}
+
+.course-date {
+  display: block;
+  font-size: 0.75rem;
+  color: #777;
+}
+
+/* BADGES */
+.badge-summary {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.badge-count {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ff9800;
+}
+
+.badge-label {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.small-btn {
+  border: none;
+  border-radius: 999px;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.ghost-btn {
+  background: #f7f5ff;
+  color: #645cbd;
+}
+
+.ghost-btn:hover {
+  background: #ebe7ff;
+}
+
+/* LEADERBOARD */
+.leaderboard-text {
+  font-size: 1rem;
+  margin: 10px 0;
+  color: #333;
+  font-weight: 500;
+}
+
+/* FOOTER */
+.dash-footer {
+  text-align: center;
+  background: #645cbd;
+  color: #fff;
+  padding: 10px;
+  font-size: 0.9rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .dash-main {
+    padding: 18px 14px;
+  }
+
+  .dash-header {
+    padding: 10px 16px;
+  }
+
+  .brand {
+    font-size: 1.4rem;
+  }
+
+  #quoteHeader {
+    font-size: 0.85rem;
+  }
+}
+
+/* Bell Button */
+.bell-btn {
+  position: relative;
+  background: #fff;
+  color: #645cbd;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 14px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: 0.25s;
+}
+
+.bell-btn:hover {
+  background: #f4f2ff;
+  transform: translateY(-1px);
+}
+
+/* Notification bubble on bell */
+.bell-btn .notif-bubble {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  min-width: 16px;
+  height: 16px;
+  border-radius: 999px;
+  background: #e53935;
+  color: white;
+  font-size: 0.7rem;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Find Mentors | SkillFusion</title>
+  <link rel="stylesheet" href="findmentor.css" />
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="fm-header">
+    <div class="brand">SkillFusion</div>
+
+    <h2 class="page-title">Find Your Mentors</h2>
+
+    <div class="right-controls">
+      <button id="btnDashboard" class="nav-btn">🏠 Dashboard</button>
+      <button id="btnLogout" class="nav-btn logout">Logout</button>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="fm-main">
+
+    <!-- Search + Sort -->
+    <div class="controls-row">
+      <input type="text" id="searchBox" placeholder="Search mentor..." />
+      <select id="sortSelect">
+        <option value="default">Sort By</option>
+        <option value="ratingHigh">Rating: High → Low</option>
+        <option value="ratingLow">Rating: Low → High</option>
+      </select>
+    </div>
+
+    <!-- SKILLS COLUMNS -->
+    <div id="skillsContainer" class="skills-columns"></div>
+
+  </main>
+
+  <!-- NOTE ABOVE FOOTER -->
+  <div class="note-box">
+    <h3>Note:</h3>
+    <p>• Pick only <b>one mentor per skill</b>.</p>
+    <p>• Based on the skills you want to learn, you can choose at most one mentor for each.</p>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="fm-footer">
+    © 2025 SkillFusion | All Rights Reserved
+  </footer>
+
+  <!-- MODAL POPUP -->
+  <div id="mentorModal" class="modal">
+    <div class="modal-content">
+      <span id="modalClose" class="close-btn">&times;</span>
+
+      <h2 id="modalName"></h2>
+      <p id="modalBio"></p>
+
+      <h3>Certificates</h3>
+      <div id="modalCertificates"></div>
+
+      <button id="modalRequestBtn" class="request-btn">Request Mentor</button>
+    </div>
+  </div>
+
+  <script src="findmentor.js" defer></script>
+</body>
+</html>

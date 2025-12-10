@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SkillFusion - Forgot Password</title>
+  <link rel="stylesheet" href="pass.css" />
+</head>
+
+<body>
+  <div class="pass-container">
+    <div class="form-box" role="main" aria-labelledby="passTitle">
+
+      <h1 id="passTitle" class="logo">SkillFusion</h1>
+      <p class="subtitle">Forgot your password? Let’s reset it securely.</p>
+
+      <form id="passwordForm" novalidate>
+
+        <!-- STEP 1 -->
+        <div id="step1">
+          <input type="text" id="contact" placeholder="Enter your registered email or mobile" required />
+          <button type="button" class="login-btn" id="sendCodeBtn">Send Code</button>
+        </div>
+
+        <!-- STEP 2 -->
+        <div id="step2" style="display:none;">
+          <input type="text" id="verificationCode" placeholder="Enter verification code" required />
+          <button type="button" class="login-btn" id="verifyBtn">Verify Code</button>
+        </div>
+
+        <!-- STEP 3 -->
+        <div id="step3" style="display:none;">
+          <div class="password-container">
+            <input type="password" id="newPassword" placeholder="Enter new password" required />
+            <button type="button" class="toggle-password" id="toggleNewPassword">👁</button>
+          </div>
+
+          <div class="password-container">
+            <input type="password" id="confirmPassword" placeholder="Confirm new password" required />
+            <button type="button" class="toggle-password" id="toggleConfirmPassword">👁</button>
+          </div>
+
+          <button type="submit" class="login-btn">Reset Password</button>
+        </div>
+
+        <p id="errorMessage" class="error-msg"></p>
+      </form>
+
+      <div class="links">
+        <p>Remembered it? <a href="login.html">Go back to login</a></p>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="pass.js" defer></script>
+</body>
+</html>

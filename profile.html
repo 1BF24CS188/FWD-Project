@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Profile | SkillFusion</title>
+  <link rel="stylesheet" href="profile.css" />
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">SkillFusion</div>
+  </header>
+
+  <main class="profile-container">
+    <section class="profile-card">
+
+      <h1>Your Profile</h1>
+      <p class="subtitle">Customize your SkillFusion identity 🎨</p>
+
+      <!-- Avatar Section -->
+      <div class="section-block">
+        <div class="avatar-section">
+          <img id="selectedAvatar" src="images/profile.png" alt="Avatar Preview" />
+          <button id="refreshAvatars" class="refresh-btn">🎲 Generate New Avatars</button>
+        </div>
+        <div id="avatarGallery" class="avatar-gallery"></div>
+      </div>
+
+      <form id="profileForm">
+
+        <!-- Bio Section -->
+        <div class="section-block">
+          <div class="form-group">
+            <label for="bio">Bio</label>
+            <textarea id="bio" rows="3" placeholder="Write about your skills, background, achievements..."></textarea>
+          </div>
+        </div>
+
+        <!-- Learn Skills -->
+        <div class="section-block">
+          <div class="form-group">
+            <label for="skillsToLearn">Skills I Want to Learn</label>
+            <div class="select-container">
+              <select id="skillsToLearn" multiple size="8"></select>
+            </div>
+            <p class="hint">💡 Hold Ctrl/Cmd for multiple selection</p>
+          </div>
+        </div>
+
+        <!-- Teach Skills -->
+        <div class="section-block">
+          <div class="form-group">
+            <label for="skillsToTeach">Skills I Can Teach</label>
+            <div class="select-container">
+              <select id="skillsToTeach" multiple size="8"></select>
+            </div>
+            <p class="hint">💡 Hold Ctrl/Cmd for multiple selection</p>
+          </div>
+        </div>
+
+        <button type="submit" class="save-btn">Save Profile</button>
+        <p id="errorMessage" class="error-msg"></p>
+        <p id="successMessage" class="success-msg"></p>
+
+      </form>
+
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 SkillFusion | All Rights Reserved</p>
+  </footer>
+
+  <script src="profile.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SkillFusion - Login</title>
+  <link rel="stylesheet" href="login.css" />
+</head>
+
+<body>
+<div class="container">
+
+  <!-- Left Image Section -->
+  <div class="image-section" aria-hidden="true">
+    <img src="skill.jpg" alt="Login illustration" />
+  </div>
+
+  <!-- Right Login Form Section -->
+  <div class="login-section">
+    <div class="form-box" role="main" aria-labelledby="loginTitle">
+
+      <h1 id="loginTitle" class="logo">SkillFusion</h1>
+      <p class="subtitle">Hey there, welcome back! Let’s get you logged in.</p>
+
+      <form id="loginForm" novalidate>
+        <input type="text" id="identifier" name="identifier"
+               placeholder="Email / Mobile / Username" autocomplete="username" required />
+
+        <div class="password-container">
+          <input type="password" id="password" name="password"
+                 placeholder="🔒 Password" autocomplete="current-password" required />
+          <button type="button" class="toggle-password" id="togglePassword"
+                  aria-label="Toggle password visibility">👁</button>
+        </div>
+
+        <button type="submit" class="login-btn">Login</button>
+
+        <!-- Enhanced error message -->
+        <p id="errorMessage" class="error-msg" aria-live="polite"></p>
+      </form>
+
+      <div class="links">
+        <a href="pass.html">Forgot your password?</a>
+        <p>New here? <a href="signup.html">Join the SkillFusion fam 🎉</a></p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script src="login.js" defer></script>
+</body>
+</html>
